@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Pure Function</title>
+	</head>
+	<body>
+		<script>
+			function counterReducer(actionType,counter) { //This is a pure function with two parameter
+				if (actionType === "INC"){
+					console.log("Counter Value is: "+counter);
+					var z=counter+1;
+					return ("Incremented Value is: " + z);
+				}else if (actionType === "DEC"){
+					console.log("Counter Value is: "+counter);
+					var x=counter-1;
+					return ("Decremented Value is: " + x);
+				}
+			}
+			counterReducer("INC",0); //calling the function with INC parameter
+			counterReducer("DEC",0); //calling the function with DEC parameter
+		</script>
+	</body>
+</html>
